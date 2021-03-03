@@ -15,10 +15,12 @@
  * @return {boolean}
  */
 var isUnique = function(astr) {
-    var set = new Set( astr.split())
+    var set = new Set( astr.split(''))
 
+
+    console.log(set)
     return set.size === astr.length
 
 };
-s = "leetcode"
+s = "abc"
 console.log(isUnique(s))
