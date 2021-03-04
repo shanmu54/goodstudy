@@ -15,12 +15,14 @@
  * @return {boolean}
  */
 var isUnique = function(astr) {
-    var set = new Set( astr.split(''))
+    for(var a of astr){
+         if(astr.indexOf(a) !== astr.lastIndexOf(a)  ){
+             return false
+         }
+    }
 
-
-    console.log(set)
-    return set.size === astr.length
+    return true
 
 };
-s = "abc"
-console.log(isUnique(s))
+s = "aabc"
+isUnique(s)
